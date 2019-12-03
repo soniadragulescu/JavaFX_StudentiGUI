@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="654.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TemaController">
+    <children>
+        <SplitPane dividerPositions="0.5" layoutX="172.0" layoutY="180.0" prefHeight="669.0" prefWidth="780.0" AnchorPane.bottomAnchor="-12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <TextField fx:id="textFieldDescriere" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="100.0" />
+                        <Label text="Descriere" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="80.0" />
+                        <Label text="Deadlineweek" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="150.0" />
+                        <TextField fx:id="textFieldDeadlineweek" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="170.0" />
+                        <Label text="Startweek" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="220.0" />
+                        <TextField fx:id="textFieldStartweek" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="240.0" />
+                        <Button fx:id="butonAdauga" mnemonicParsing="false" text="Adauga" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="300.0" />
+                        <TextField fx:id="textFieldId" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="50.0" />
+                        <Label text="Id" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="30.0" />
+                        <Button fx:id="butonSterge" mnemonicParsing="false" text="Sterge" AnchorPane.rightAnchor="255.0" AnchorPane.topAnchor="340.0" />
+                        <Button fx:id="butonUpdate" mnemonicParsing="false" text="Update" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="380.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="tableViewTema" prefHeight="398.0" prefWidth="324.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="tableColumnDescriere" prefWidth="111.99999749660492" text="Descriere" />
+                                <TableColumn fx:id="tableColumnDeadlineweek" prefWidth="68.00000762939453" text="Deadlineweek" />
+                                <TableColumn fx:id="tableColumnStartweek" prefWidth="179.3333282470703" text="Startweek" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

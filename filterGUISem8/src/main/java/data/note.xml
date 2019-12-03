@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities>
+    <nota>
+        <idStudent>2</idStudent>
+        <idTema>1</idTema>
+        <grade>7</grade>
+        <predare>7</predare>
+        <profesor>RoxanaL</profesor>
+        <feedback>Mehhh</feedback>
+    </nota>
+    <nota>
+        <idStudent>1</idStudent>
+        <idTema>1</idTema>
+        <grade>9</grade>
+        <predare>7</predare>
+        <profesor>RoxanaL</profesor>
+        <feedback>Bine</feedback>
+    </nota>
+    <nota>
+        <idStudent>1</idStudent>
+        <idTema>2</idTema>
+        <grade>10</grade>
+        <predare>7</predare>
+        <profesor>DianaM</profesor>
+        <feedback>Super</feedback>
+    </nota>
+</entities>

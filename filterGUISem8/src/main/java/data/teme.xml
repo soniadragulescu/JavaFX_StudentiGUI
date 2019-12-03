@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities>
+    <tema id="1">
+        <descriere>laborator7MAP</descriere>
+        <startweek>7</startweek>
+        <deadlineweek>9</deadlineweek>
+    </tema>
+    <tema id="2">
+        <descriere>laborator4PLF</descriere>
+        <startweek>7</startweek>
+        <deadlineweek>10</deadlineweek>
+    </tema>
+    <tema id="3">
+        <descriere>laborator1</descriere>
+        <startweek>7</startweek>
+        <deadlineweek>14</deadlineweek>
+    </tema>
+</entities>
