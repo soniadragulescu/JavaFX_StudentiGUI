@@ -3,10 +3,12 @@ package service;
 import domain.Nota;
 import domain.Student;
 import domain.Tema;
+import javafx.util.Pair;
 import repositories.XMLNotaFileRepository;
 import repositories.XMLStudentFileRepository;
 import repositories.XMLTemaFileRepository;
 import validators.NotaValidator;
+import validators.ValidatorException;
 
 import javax.xml.bind.ValidationException;
 import java.util.ArrayList;
@@ -25,7 +27,7 @@ public class NotaService {
         this.fileRepoS=fileRepoS;
         this.fileRepoT=fileRepoT;
     }
-    public Nota adauga(String sId,String tId, Integer grade, Integer predare,String profesor, String feedback, Integer saptamana, boolean m) throws ValidationException {
+    public Nota adauga(String sId,String tId, Integer grade, Integer saptamana,String profesor, String feedback, boolean m) throws ValidationException {
 
         Student student = fileRepoS.findOne(sId);
         Tema tema = fileRepoT.findOne(tId);
@@ -40,7 +42,7 @@ public class NotaService {
                 grade = 1;
             }
         }
-        Nota n=new Nota(sId,tId,grade,predare,profesor,feedback);
+        Nota n=new Nota(sId,tId,grade,saptamana,profesor,feedback);
         this.validator.validate(n);
         return this.fileRepoN.save(n);
     }
@@ -55,19 +57,39 @@ public class NotaService {
         return fileRepo.delete(id);
     }*/
     // public Tema modifica(String line) throws ValidationException;
-   /* public Tema gaseste(String id){
-        if(id.equals("")){
+   public Nota gaseste(Pair<String,String> id){
+        if(id.getKey().equals("")||id.getValue().equals("")){
             throw new ValidatorException("Id nu poate fi null! ");
         }
-        return fileRepo.findOne(id);
-    }*/
+        return fileRepoN.findOne(id);
+    }
+
     public Iterable<Nota> toate(){
         return fileRepoN.findAll();
+    }
+    public Iterable<Student> totiStudentii(){
+        return fileRepoS.findAll();
     }
 
     public List<Nota> findAllGrades(){
         List<Nota> result = new ArrayList<Nota>();
         this.toate().forEach(result::add);
+        return result
+                .stream()
+                .collect(Collectors.toList());
+    }
+
+    public List<Student> findAllStudents(){
+        List<Student> result = new ArrayList<>();
+        this.fileRepoS.findAll().forEach(result::add);
+        return result
+                .stream()
+                .collect(Collectors.toList());
+    }
+
+    public List<Tema> findAllTeme(){
+        List<Tema> result = new ArrayList<>();
+        this.fileRepoT.findAll().forEach(result::add);
         return result
                 .stream()
                 .collect(Collectors.toList());

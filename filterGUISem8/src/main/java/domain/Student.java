@@ -38,10 +38,8 @@ public class Student extends Entity<String>{
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", group=" + group +
-                ", email='" + email + '\'' +
-                '}';
+        return this.getId().toString()+' '+name + ' ' +
+                + group
+                ;
     }
 }

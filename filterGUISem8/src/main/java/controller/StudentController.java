@@ -10,14 +10,19 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import service.ServiceManager;
 import service.StudentService;
+import utils.Observer;
+import utils.StudentEvent;
+
 import javax.xml.bind.ValidationException;
 import java.util.List;
+import java.util.Observable;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
-public class StudentController {
+import utils.StudentEvent;
 
-    ObservableList<Student> modelGrade = FXCollections.observableArrayList();
-
+public class StudentController implements Observer{
+    private ObservableList<Student> modelGrade = FXCollections.observableArrayList();
     private StudentService studentService;
 
 
@@ -57,21 +62,39 @@ public class StudentController {
         tableColumnGrupa.setCellValueFactory(new PropertyValueFactory<Student, Integer>("group"));
         tableColumnEmail.setCellValueFactory(new PropertyValueFactory<Student, String>("email"));
         tableViewStudenti.setItems(modelGrade);
+        //tableViewStudenti.setItems(getStudentList());
+
+        this.tableViewStudenti.getSelectionModel().selectedItemProperty().addListener(
+                (observable,oldValue,newValue)->{
+
+                        Student s=newValue;
+                        textFieldId.setText("" + s.getId());
+                        textFieldName.setText("" + s.getName());
+                        textFieldGrupa.setText("" + s.getGroup().toString());
+                        textFieldEmail.setText("" + s.getEmail());
 
 
-        tableViewStudenti.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Student>() {
+                });
+
+
+        /*tableViewStudenti.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Student>() {
             @Override
             public void changed(ObservableValue<? extends Student> observable, Student oldValue, Student newValue) {
                 //Student s=tableViewStudenti.getSelectionModel().getSelectedItem();
-                Student s=newValue;
-                textFieldId.setText(""+s.getId());
-                textFieldName.setText(""+s.getName());
-                textFieldGrupa.setText(""+s.getGroup().toString());
-                textFieldEmail.setText(""+s.getEmail());
+                //Student s=newValue;
+                if(newValue==null)
+                    clearFields();
+                else {
+                    Student s=newValue;
+                    textFieldId.setText("" + s.getId());
+                    textFieldName.setText("" + s.getName());
+                    textFieldGrupa.setText("" + s.getGroup().toString());
+                    textFieldEmail.setText("" + s.getEmail());
+                }
                 //showStudentsDetails(newValue);
 
             }
-        });
+        });*/
 
         textFieldName.textProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -87,8 +110,16 @@ public class StudentController {
 
     }
 
-    private List<Student> getStudentList() {
-        return studentService.findAllStudents();
+    //private List<Student> getStudentList() {return studentService.findAllStudents();}
+    private void populateList(){
+        Iterable<Student> students = this.studentService.toate();
+        students.forEach(x->this.modelGrade.add(x));
+    }
+
+    private ObservableList<Student> getStudentList() {
+
+        //return studentService.findAllStudents();
+        return this.modelGrade;
     }
 
     private void handleAdauga(){
@@ -148,23 +179,26 @@ public class StudentController {
         message.showAndWait();
     }
     private void handleFilter() {
-        List<Student> list=getStudentList();
-        List<Student> listaFiltrata=list.stream()
-                .filter(n->n.getName().startsWith(textFieldName.getText()))
-                .collect(Collectors.toList());
-        modelGrade.setAll(listaFiltrata);
-
+            List<Student> list = getStudentList();
+            List<Student> listaFiltrata = list.stream()
+                    .filter(n -> n.getName().startsWith(textFieldName.getText()))
+                    .collect(Collectors.toList());
+        ObservableList<Student> students = FXCollections.observableArrayList(listaFiltrata);
+        tableViewStudenti.setItems(students);
+        //modelGrade.setAll(listaFiltrata);
     }
 
     private void clearFields(){
+        textFieldId.setText("");
         textFieldName.setText("");
         textFieldGrupa.setText("");
         textFieldEmail.setText("");
     }
-    private void showStudentsDetails(Student s){
+    private void showStudentDetails(Student s){
         if(s==null)
             clearFields();
         else
+            textFieldId.setText((""+s.getId()));
             textFieldName.setText(""+s.getName());
             textFieldGrupa.setText(""+s.getGroup().toString());
             textFieldEmail.setText(""+s.getEmail());
@@ -172,7 +206,35 @@ public class StudentController {
 
     public void setService(StudentService service) {
         this.studentService = service;
-        modelGrade.setAll(getStudentList());
+        studentService.addObserver(this);
+        //modelGrade.setAll(getStudentList());
+        initModel();
+        /*
+        tableViewStudenti.getSelectionModel().selectedItemProperty().addListener((
+                (observable, oldValue, newValue) -> {
+                    if(newValue!=null)
+                        setSelectedItem(newValue);
+                }));*/
+        //modelGrade.setAll(getStudentList());
+       // populateList();
 
+    }
+    private void setSelectedItem(Student s){
+        textFieldId.setText(s.getId().toString());
+        textFieldName.setText(s.getName());
+        textFieldGrupa.setText(s.getGroup().toString());
+        textFieldEmail.setText(s.getEmail());
+    }
+
+    private void initModel(){
+        List<Student> list = StreamSupport.stream(this.studentService.toate().spliterator(),false)
+                .collect(Collectors.toList());
+        modelGrade.setAll(list);
+    }
+
+    @Override
+    public void update() {
+        modelGrade.setAll(StreamSupport.stream(studentService.toate().spliterator(),false)
+                .collect(Collectors.toList()));
     }
 }

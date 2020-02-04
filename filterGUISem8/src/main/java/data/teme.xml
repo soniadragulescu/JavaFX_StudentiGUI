@@ -15,4 +15,9 @@
         <startweek>7</startweek>
         <deadlineweek>14</deadlineweek>
     </tema>
+    <tema id="5">
+        <descriere>TemaDeTest</descriere>
+        <startweek>10</startweek>
+        <deadlineweek>12</deadlineweek>
+    </tema>
 </entities>

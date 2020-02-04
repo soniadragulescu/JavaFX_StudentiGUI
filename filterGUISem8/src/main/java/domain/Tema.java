@@ -13,11 +13,10 @@ public class Tema extends Entity<String>{
 
     @Override
     public String toString() {
-        return "Tema{" +
-                "descriere='" + descriere + '\'' +
-                ", startweek=" + startweek +
-                ", deadlineweek=" + deadlineweek +
-                '}';
+        return descriere + ' ' +
+                "startweek:" + startweek +
+                " deadlineweek:" + deadlineweek
+                ;
     }
 
     public String getDescriere() {

@@ -1,5 +1,6 @@
 package controller;
 
+import domain.StructuraAn;
 import domain.Student;
 import domain.Tema;
 import javafx.beans.value.ChangeListener;
@@ -16,7 +17,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class TemaController {
-
     ObservableList<Tema> modelGrade = FXCollections.observableArrayList();
 
     private TemaService temaService;
@@ -63,7 +63,6 @@ public class TemaController {
         tableViewTema.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tema>() {
             @Override
             public void changed(ObservableValue<? extends Tema> observable, Tema oldValue, Tema newValue) {
-                //Student s=tableViewStudenti.getSelectionModel().getSelectedItem();
                 Tema s=newValue;
                 textFieldId.setText(""+s.getId());
                 textFieldDescriere.setText(""+s.getDescriere());

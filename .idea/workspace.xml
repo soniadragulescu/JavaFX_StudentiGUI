@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a29709f3-c184-4286-b32f-73058f8f677f" name="Default Changelist" comment="" />
+    <list default="true" id="a29709f3-c184-4286-b32f-73058f8f677f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/domain/Medie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/service/ApplicationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/service/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/utils/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/utils/Observable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/utils/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/utils/PossibleOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/utils/StudentEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filterGUISem8/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/controller/NotaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/controller/NotaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/controller/TemaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/controller/TemaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/data/note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/data/note.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/data/studenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/data/studenti.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/data/teme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/data/teme.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/domain/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/domain/Tema.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/domain/Tema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/service/FilterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/service/FilterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/service/NotaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/service/NotaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/java/validators/TemaValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/java/validators/TemaValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filterGUISem8/src/main/resources/view/notaView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/filterGUISem8/src/main/resources/view/notaView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/controller/NotaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/controller/NotaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/controller/StudentController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/controller/StudentController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/controller/StudentController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/controller/TemaController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/controller/TemaController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/controller/TemaController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/controller/TemaController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/controller/TemaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/controller/TemaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/data/note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/data/note.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/data/studenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/data/studenti.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/data/teme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/data/teme.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/domain/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/domain/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/domain/Tema.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/domain/Tema.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/service/FilterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/service/FilterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/service/NotaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/service/NotaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/validators/TemaValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/validators/TemaValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/view/notaView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/view/notaView.fxml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,14 +57,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="FxmlFile" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1U6NSRo3koeJmy1ar2qcIZFidjM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -71,11 +124,35 @@
       <workItem from="1574778309058" duration="13434000" />
       <workItem from="1574807970015" duration="639000" />
       <workItem from="1574871007955" duration="1668000" />
-      <workItem from="1575203732582" duration="13173000" />
+      <workItem from="1575203732582" duration="22893000" />
+      <workItem from="1575459780289" duration="6635000" />
+      <workItem from="1575541612391" duration="3229000" />
+      <workItem from="1575710777794" duration="8056000" />
+      <workItem from="1576053070438" duration="1416000" />
+      <workItem from="1576263428484" duration="11170000" />
+      <workItem from="1576512124215" duration="2234000" />
+      <workItem from="1578471247025" duration="677000" />
+      <workItem from="1579802750934" duration="12590000" />
+      <workItem from="1579870762024" duration="110000" />
+      <workItem from="1580122906869" duration="2300000" />
+      <workItem from="1580566274187" duration="146000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

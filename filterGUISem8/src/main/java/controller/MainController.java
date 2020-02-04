@@ -1,11 +1,13 @@
 package controller;
 
+import domain.StructuraAn;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import service.FilterService;
 import service.NotaService;
 import service.StudentService;
 import service.TemaService;
@@ -17,6 +19,7 @@ public class MainController {
     private StudentService serviceS;
     private NotaService serviceN;
     private TemaService serviceT;
+    private FilterService serviceF;
 
     @FXML
     javafx.scene.control.Button butonStudenti;
@@ -96,18 +99,20 @@ public class MainController {
         loader.setLocation(getClass().getResource("/view/notaView.fxml"));
         AnchorPane root=loader.load();
 
+
         NotaController ctrlN=loader.getController();
-        ctrlN.setService(serviceN);
+        ctrlN.setService(serviceN,serviceF);
 
         primaryStage.setScene(new Scene(root, 700, 500));
         primaryStage.setTitle("NOTE");
         primaryStage.show();
     }
 
-    public void setService(StudentService serviceS,  TemaService serviceT,NotaService serviceN) {
+    public void setService(StudentService serviceS,  TemaService serviceT,NotaService serviceN, FilterService serviceF) {
         this.serviceS = serviceS;
         this.serviceN = serviceN;
         this.serviceT = serviceT;
+        this.serviceF=serviceF;
     }
 
 }
